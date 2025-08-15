@@ -543,7 +543,7 @@
                 font-weight: 600;
                 display: flex;
                 justify-content: space-between;
-                align-items: left;
+                align-items: center;
                 cursor: pointer;
               "
             >
@@ -596,7 +596,7 @@
                 font-weight: 600;
                 display: flex;
                 justify-content: space-between;
-                align-items: left;
+                align-items: center;
                 cursor: pointer;
               "
             >
@@ -1250,7 +1250,73 @@
               Dr. Omolola Bassey
             </h5>
             <h6 style="color: #4ecdc4; font-size: 0.9rem; margin: 5px 0">
-              Procurement Manager / QA
+              Research & Capacity Development
+            </h6>
+          </div>
+            <!-- Team Member -->
+          <div
+            style="
+              background: #fff;
+              border-radius: 10px;
+              padding: 20px;
+              text-align: center;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+              transition: transform 0.3s;
+            "
+          >
+            <img
+              src="assets/images/jatto.jpg"
+              alt="Omolola Bassey"
+              style="
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                object-fit: cover;
+                display: block;
+                margin: 0 auto 15px;
+              "
+            />
+            <h5 style="font-size: 1.1rem; font-weight: bold; color: #0a1a2f">
+              Arc. Jatto Joseph
+            </h5>
+            <h6 style="color: #4ecdc4; font-size: 0.9rem; margin: 5px 0">
+              Lead Architect
+            </h6>
+          </div>
+            <!-- Team Member -->
+          <div
+            style="
+              background: #fff;
+              border-radius: 10px;
+              padding: 20px;
+              text-align: center;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+              transition: transform 0.3s;
+            "
+          >
+            <img
+              src="assets/images/olowe.jpg"
+              alt="Olowe"
+              style="
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                object-fit: cover;
+                display: block;
+                margin: 0 auto 15px;
+              "
+            />
+            <h5 style="font-size: 1.1rem; font-weight: bold; color: #0a1a2f">
+           Engr. Segun Olowe 
+            </h5>
+            <h6 style="color: #4ecdc4; font-size: 0.9rem; margin: 5px 0">
+              M & E Engineer
             </h6>
           </div>
         </div>
@@ -1428,42 +1494,14 @@
     <textarea name="message" placeholder="Full Message *" rows="4" required
               style="padding:10px; border:1px solid #ccc; border-radius:5px; outline:none;"></textarea>
 
-    <!-- Google reCAPTCHA -->
-    <div class="g-recaptcha" data-sitekey="6LdnAKcrAAAAAEoWrlxHzuHbD7z9I3SD_AyRwm3Q"></div>
+
+   
 
     <button type="submit" 
             style="background:#1d1811; color:#ffffff; padding:12px; border:none; border-radius:5px; font-weight:bold; cursor:pointer;">
         Send a message ✉️
     </button>
 </form>
-
-<!-- Load reCAPTCHA and EmailJS -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-    (function() {
-        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with EmailJS Public Key
-    })();
-
-    document.getElementById("contact-form").addEventListener("submit", function(e) {
-        e.preventDefault();
-
-        let captchaResponse = grecaptcha.getResponse();
-        if (!captchaResponse) {
-            alert("Please complete the CAPTCHA.");
-            return;
-        }
-
-        emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
-            .then(function() {
-                alert("✅ Message sent successfully!");
-                document.getElementById("contact-form").reset();
-                grecaptcha.reset(); // Reset captcha after sending
-            }, function(error) {
-                alert("❌ Failed to send message: " + JSON.stringify(error));
-            });
-    });
-</script>
 
     </div>
   </div>
